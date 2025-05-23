@@ -36,6 +36,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   function logout() {
     setUser(null);
+    fetchNui('fleecanow:logout');
   }
 
   return (
