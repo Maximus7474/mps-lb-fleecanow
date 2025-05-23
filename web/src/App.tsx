@@ -5,6 +5,7 @@ import { devMode } from './utils/utils';
 import ThemeToggler from './components/dev/Theming';
 import { useAuth } from './hooks/useAuth';
 import { Route, Routes } from "react-router-dom";
+import Login from './pages/Login/Login';
 
 const App = () => {
   const { user } = useAuth();
@@ -23,7 +24,7 @@ const App = () => {
         <div className="app-wrapper">
           <Routes>
             <Route path='/' element={'<Home />'} />
-            <Route path='/login' element={'<Login />'} />
+            <Route path='/login' element={<Login />} />
             <Route path='/register' element={'<Register />'} />
             {user && <>
               <Route path='/account' element={'<Account />'} />
