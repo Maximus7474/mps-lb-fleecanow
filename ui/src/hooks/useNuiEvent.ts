@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from 'react';
 
 /*
 
@@ -8,8 +8,8 @@ import { RefObject, useEffect, useRef } from "react";
 */
 
 interface NuiMessageData<T = unknown> {
-    action: string;
-    data: T;
+  action: string;
+  data: T;
 }
 
 type NuiHandlerSignature<T> = (data: T) => void;
@@ -26,30 +26,27 @@ type NuiHandlerSignature<T> = (data: T) => void;
  *
  **/
 
-export const useNuiEvent = <T = unknown>(
-    action: string,
-    handler: (data: T) => void,
-) => {
-    const savedHandler: RefObject<NuiHandlerSignature<T>> = useRef(() => {});
+export const useNuiEvent = <T = unknown>(action: string, handler: (data: T) => void) => {
+  const savedHandler: RefObject<NuiHandlerSignature<T>> = useRef(() => {});
 
-    // Make sure we handle for a reactive handler
-    useEffect(() => {
-        savedHandler.current = handler;
-    }, [handler]);
+  // Make sure we handle for a reactive handler
+  useEffect(() => {
+    savedHandler.current = handler;
+  }, [handler]);
 
-    useEffect(() => {
-        const eventListener = (event: MessageEvent<NuiMessageData<T>>) => {
-            const { action: eventAction, data } = event.data;
+  useEffect(() => {
+    const eventListener = (event: MessageEvent<NuiMessageData<T>>) => {
+      const { action: eventAction, data } = event.data;
 
-            if (savedHandler.current) {
-                if (eventAction === action) {
-                    savedHandler.current(data);
-                }
-            }
-        };
+      if (savedHandler.current) {
+        if (eventAction === action) {
+          savedHandler.current(data);
+        }
+      }
+    };
 
-        window.addEventListener("message", eventListener);
-        // Remove Event Listener on component cleanup
-        return () => window.removeEventListener("message", eventListener);
-    }, [action]);
+    window.addEventListener('message', eventListener);
+    // Remove Event Listener on component cleanup
+    return () => window.removeEventListener('message', eventListener);
+  }, [action]);
 };

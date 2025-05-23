@@ -1,1 +1,1 @@
-export const devMode = !window?.['invokeNative']
+export const devMode = !window?.['invokeNative'];
