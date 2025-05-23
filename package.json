@@ -1,0 +1,46 @@
+{
+	"name": "fivem-typescript-boilerplate",
+	"author": "Overextended",
+	"version": "0.0.0",
+	"license": "",
+	"description": "",
+	"type": "module",
+	"scripts": {
+		"web:dev": "cd web && vite dev",
+		"build": "node scripts/build.js",
+		"watch": "node scripts/build.js --watch",
+		"format": "pnpm biome format --write",
+		"lint": "pnpm biome lint --write"
+	},
+	"keywords": [
+		"fivem"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/overextended/fivem-typescript-boilerplate.git"
+	},
+	"bugs": "https://github.com/overextended/fivem-typescript-boilerplate/issues",
+	"devDependencies": {
+		"@citizenfx/client": "latest",
+		"@citizenfx/server": "latest",
+		"@jgoz/esbuild-plugin-typecheck": "^4.0.3",
+		"@communityox/fx-utils": "^0.0.4",
+		"@types/node": "^22.15.21",
+		"@types/react": "^19.1.5",
+		"@types/react-dom": "^19.1.5",
+		"@types/react-router-dom": "^5.3.3",
+		"@vitejs/plugin-react": "^4.5.0",
+		"esbuild": "^0.25.4",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5"
+	},
+	"dependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@nativewrappers/fivem": "latest",
+		"@communityox/ox_lib": "latest",
+		"lucide-react": "^0.511.0",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-router-dom": "^7.6.0"
+	}
+}
