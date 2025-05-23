@@ -4,6 +4,12 @@
 
   --text-primary: #000000;
   --text-secondary: #8e8e93;
+
+  --primary: #15852c;
+  --primary-highlight: #134e1f;
+
+  --primary-shadow: rgba(36, 161, 79, 0.2);
+  --secondary-shadow: rgba(54, 54, 54, 0.35);
 }
 
 [data-theme='dark'] {
@@ -12,4 +18,10 @@
 
   --text-primary: #f2f2f7;
   --text-secondary: #6f6f6f;
+
+  --primary: #023012;
+  --primary-highlight: rgb(6, 141, 53);
+
+  --primary-shadow: rgba(36, 161, 79, 0.3);
+  --secondary-shadow: rgba(88, 88, 88, 0.35);
 }
