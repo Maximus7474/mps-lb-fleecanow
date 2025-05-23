@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useRef } from 'react';
 import './App.css';
 import Frame from './components/dev/Frame';
 import { devMode } from './utils/utils';
+import ThemeToggler from './components/dev/Theming';
 
 const App = () => {
   const appDiv = useRef(null);
@@ -19,6 +20,7 @@ const App = () => {
         <div className="app-wrapper">
         </div>
       </div>
+      <ThemeToggler />
     </AppProvider>
   );
 };
