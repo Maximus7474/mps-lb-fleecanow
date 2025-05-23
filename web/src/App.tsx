@@ -4,8 +4,10 @@ import Frame from './components/dev/Frame';
 import { devMode } from './utils/utils';
 import ThemeToggler from './components/dev/Theming';
 import { useAuth } from './hooks/useAuth';
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
+  const { user } = useAuth();
   const appDiv = useRef(null);
 
   useEffect(() => {
@@ -19,6 +21,15 @@ const App = () => {
     <AppProvider>
       <div className="app" ref={appDiv}>
         <div className="app-wrapper">
+          <Routes>
+            <Route path='/' element={'<Home />'} />
+            <Route path='/login' element={'<Login />'} />
+            <Route path='/register' element={'<Register />'} />
+            {user && <>
+              <Route path='/account' element={'<Account />'} />
+              <Route path='/transfer' element={'<Transfer />'} />
+            </>}
+          </Routes>
         </div>
       </div>
       <ThemeToggler />

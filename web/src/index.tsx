@@ -5,15 +5,18 @@ import { devMode } from './utils/utils';
 
 import './colors.css';
 import './index.css';
+import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 if (window.name === '' || devMode) {
   const renderApp = () => {
     root.render(
-      <AuthProvider>
-        <App />
-      </AuthProvider>
+      <HashRouter>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
+      </HashRouter>
     );
   };
 
