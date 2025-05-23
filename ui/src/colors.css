@@ -4,10 +4,6 @@
 
     --text-primary: #000000;
     --text-secondary: #8e8e93;
-
-    --fleeca-green: #298c3f;
-    --fleeca-black: #111111;
-    --fleeca-white: #eaf1fb;
 }
 
 [data-theme='dark'] {
@@ -16,8 +12,4 @@
 
     --text-primary: #f2f2f7;
     --text-secondary: #6f6f6f;
-
-    --fleeca-green: #298c3f;
-    --fleeca-black: #f5f5f5;
-    --fleeca-white: #1a1a1a;
 }
