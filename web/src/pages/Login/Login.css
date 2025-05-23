@@ -1,0 +1,91 @@
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  min-height: 100vh;
+  background-color: var(--background-primary);
+}
+
+.login img {
+  margin-bottom: 2em;
+  max-width: 12em;
+  height: auto;
+  border-radius: 2em;
+  box-shadow: 0 0 20px var(--secondary-shadow);
+}
+
+.login-form {
+  width: 100%;
+  max-width: 100%;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+
+.login-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form div > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-form div > div input {
+  width: 100%;
+  padding-right: 3.3em;
+}
+
+.login-form div > div button.show-password {
+  position: absolute;
+  right: 0;
+  width: 4em;
+  background: transparent;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+  padding: 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-form div > div button.show-password:hover {
+  background-color: var(--background-highlight);
+  padding-bottom: 0.4em;
+}
+
+.login-form label {
+  margin-bottom: 0.25em;
+  font-weight: 300;
+  font-size: small;
+}
+
+.login-form input[type='text'],
+.login-form input[type='password'] {
+  font-size: 1em;
+  width: 100%;
+}
+
+.login-form .login-button {
+  align-self: center;
+  padding: 0.75em;
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.login-form .login-button:hover {
+  background-color: var(--primary-highlight);
+}
