@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useRef } from 'react';
 import './App.css';
-import Frame from './components/Frame';
+import Frame from './components/dev/Frame';
 import { devMode } from './utils/utils';
 
 const App = () => {
