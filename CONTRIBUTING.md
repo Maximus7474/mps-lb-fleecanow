@@ -23,21 +23,6 @@ Install the [`pnpm`](https://pnpm.io/installation) package manager globally.
 npm install -g pnpm
 ```
 
-### Setup
-
-Initialise your own repository by using one of the options below.
-
-- [Create a new repository](https://github.com/new?template_name=fivem-typescript-boilerplate&template_owner=overextended) using this template.
-- [Download](https://github.com/overextended/fivem-typescript-boilerplate/archive/refs/heads/main.zip) the template directly.
-- Use the [GitHub CLI](https://cli.github.com/).
-  - `gh repo create <name> --template=overextended/fivem-typescript-boilerplate`
-
-Navigate to your new directory and execute the following command to install dependencies.
-
-```
-pnpm install
-```
-
 ## Development
 
 Use `pnpm watch` to actively rebuild modified files while developing the resource.
