@@ -47,3 +47,5 @@ To build and create GitHub releases, tag your commit (e.g. `v1.0.0`) and push it
   - Project source code.
 - [/static/](static)
   - Files to include with the resource that aren't compiled or loaded (e.g. config).
+
+*Guide Credit to Overextended - ([github](https://github.com/overextended)) - ([more info](https://overextended.dev))*
