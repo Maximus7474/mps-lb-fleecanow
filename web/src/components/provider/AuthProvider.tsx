@@ -2,8 +2,10 @@ import { useState, ReactNode } from 'react';
 import { fetchNui } from '../../utils/fetchNui';
 import { User, LoginResponse } from '../../types';
 import { AuthContext } from '../../hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 
 export function AuthProvider({ children }: { children: ReactNode }) {
+  const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
   const [loginError, setLoginError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -22,6 +24,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }).then(data => {
       if (data.success) {
         setUser(data.user);
+        navigate('/profile')
       }
       else {
         setUser(null);
