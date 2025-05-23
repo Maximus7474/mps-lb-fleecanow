@@ -1,12 +1,11 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
 import './colors.css';
 import './index.css';
+import { devMode } from './utils/utils';
 
-const devMode = !window?.['invokeNative'];
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 if (window.name === '' || devMode) {
   const renderApp = () => {

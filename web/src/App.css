@@ -29,32 +29,6 @@
   gap: 3rem;
 }
 
-.header,
-.button-wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 0.2rem;
-}
-
-.button-wrapper {
-  gap: 1rem;
-}
-
-.title {
-  font-size: 1.4rem;
-  font-weight: 700;
-
-  color: var(--text-primary);
-}
-
-.subtitle {
-  font-size: 1rem;
-  font-weight: 400;
-
-  color: var(--text-secondary);
-}
-
 button {
   width: 14rem;
   height: 3.25rem;
