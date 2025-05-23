@@ -1,7 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 import { fetchNui } from '../../utils/fetchNui';
-import { User } from '../../types';
-import { LoginResponse } from 'src/types/auth';
+import { User, LoginResponse } from '../../types';
 
 type AuthContextType = {
   user: User | null;
