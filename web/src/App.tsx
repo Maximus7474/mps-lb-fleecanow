@@ -3,6 +3,7 @@ import './App.css';
 import Frame from './components/dev/Frame';
 import { devMode } from './utils/utils';
 import ThemeToggler from './components/dev/Theming';
+import { useAuth } from './hooks/useAuth';
 
 const App = () => {
   const appDiv = useRef(null);

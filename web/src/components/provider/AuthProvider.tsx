@@ -1,16 +1,7 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { useState, ReactNode } from 'react';
 import { fetchNui } from '../../utils/fetchNui';
 import { User, LoginResponse } from '../../types';
-
-type AuthContextType = {
-  user: User | null;
-  loginError: string | null;
-  login: (username: string, password: string) => Promise<void>;
-  logout: () => void;
-  loading: boolean;
-};
-
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+import { AuthContext } from '../../hooks/useAuth';
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
@@ -49,12 +40,4 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       {children}
     </AuthContext.Provider>
   );
-}
-
-export function useAuth() {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context;
-}
+};
