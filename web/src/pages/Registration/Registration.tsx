@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Registration.css'
 import { useAuth } from '../../hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 type formFields = 'username'|'password'|'confirmedPassword';
 
@@ -84,6 +84,12 @@ const Registration: React.FC = () => {
         Register
       </button>
     </form>
+    <div>
+      <p>
+        Already have an account ?<br/>
+        <Link to='/login'>Login</Link> here!
+      </p>
+    </div>
   </div>);
 };
 
