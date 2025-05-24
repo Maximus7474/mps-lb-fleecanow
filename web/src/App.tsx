@@ -7,6 +7,7 @@ import { useAuth } from './hooks/useAuth';
 import { Route, Routes } from "react-router-dom";
 import Login from './pages/Login/Login';
 import Registration from './pages/Registration/Registration';
+import Home from './pages/Home/Home';
 
 const App = () => {
   const { user } = useAuth();
@@ -24,7 +25,7 @@ const App = () => {
       <div className="app" ref={appDiv}>
         <div className="app-wrapper">
           <Routes>
-            <Route path='/' element={'<Home />'} />
+            <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Registration />} />
             {user && <>
