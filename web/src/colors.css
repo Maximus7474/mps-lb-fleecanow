@@ -10,6 +10,9 @@
 
   --primary-shadow: rgba(36, 161, 79, 0.2);
   --secondary-shadow: rgba(54, 54, 54, 0.35);
+
+  --error-primary: #d30505;
+  --error-highlight: #d30505;
 }
 
 [data-theme='dark'] {
@@ -24,4 +27,7 @@
 
   --primary-shadow: rgba(36, 161, 79, 0.3);
   --secondary-shadow: rgba(88, 88, 88, 0.35);
+
+  --error-primary: #ff3131;
+  --error-highlight: #c50000;
 }
