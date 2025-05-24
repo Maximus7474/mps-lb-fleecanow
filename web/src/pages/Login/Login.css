@@ -89,3 +89,22 @@
 .login-form .login-button:hover {
   background-color: var(--primary-highlight);
 }
+
+.login div:last-of-type > p {
+  text-align: center;
+  font-size: medium;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1em;
+}
+
+.login div:last-of-type > p > a {
+  color: var(--primary);
+  transition: all ease 0.2s;
+}
+
+.login div:last-of-type > p > a:hover {
+  font-weight: 600;
+  color: var(--primary-highlight);
+  text-decoration: underline 1.5px;
+}

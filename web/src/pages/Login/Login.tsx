@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Login.css'
 import { useAuth } from '../../hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff } from 'lucide-react';
 
 const Login: React.FC = () => {
@@ -61,6 +61,12 @@ const Login: React.FC = () => {
         Login
       </button>
     </form>
+    <div>
+      <p>
+        Don't have an account ?<br/>
+        <Link to='/register'>Register</Link> now !
+      </p>
+    </div>
   </div>);
 };
 
